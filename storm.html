@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Analysis of Storm Affects on Population Health and Economy in USA</title>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Analysis of Storm Affects on Population Health and Economy in USA</h1>
+
+<h2>Synopsis</h2>
+
+<p>In this report we aim to describe the affects of storms in USA on population health and economy by analyzing storm data from 1950 to 2011. Using the storm data obtained from  U.S. National Oceanic and Atmospheric Administration&#39;s (NOAA) storm database, we present type of storm related events that are responsible for most negative affects. Top 25 such storm events are presented. Additionally individual events are grouped into event classes and affects of those are also presented.   </p>
+
+<h2>Data Processing</h2>
+
+<h3>Analysis</h3>
+
+<p>We postulate that sum aggregates of damages will provide a meaninful measure for our analysis.  </p>
+
+<p>Population health (HEALTHDAMAGES) for each event is obtained after cumulative sum of reported injuries and fatilities for each year between 1950 - 2011. Economic affect (DMGCASH) for each event is obtained after cumlative sum of crop and property damage and after applying appropiate multipler. The results are then sorted and top 25 events and their values are presented.  </p>
+
+<p>Event Class affects is done similary except each storm data event is first grouped into a class and then the sums are obtained for each class. Please see MakeGroups() function (below) </p>
+
+<h3>Loading</h3>
+
+<p>The data used for this analysis is available at this URL <a href="https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2">https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2</a>.  </p>
+
+<pre><code class="r">#repdata-data-StormData.csv.bz2 is obtained from https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2FStormData.csv.bz2
+storm.data &lt;- read.csv(&quot;repdata-data-StormData.csv.bz2&quot;)
+</code></pre>
+
+<h3>Processing Health Affects</h3>
+
+<p>Subset the storm data to extract health affects</p>
+
+<pre><code class="r">library(ggplot2)
+library(data.table)
+library(xtable)
+sd.health &lt;- storm.data[ storm.data$FATALITIES &gt; 0 | storm.data$INJURIES &gt; 0, 
+                         c(&quot;EVTYPE&quot;, &quot;INJURIES&quot;, &quot;FATALITIES&quot;)]
+sd.health$EVTYPE2 &lt;- as.factor(toupper(sd.health$EVTYPE))    
+</code></pre>
+
+<p>Calculate health affects (HEALTHDAMAGES)</p>
+
+<pre><code class="r">sd.health$HEALTHDAMAGES &lt;- sd.health$FATALITIES + sd.health$INJURIES;
+sd.health.sum &lt;- tapply(sd.health$HEALTHDAMAGES, sd.health$EVTYPE2, sum)
+sd.health.sum &lt;- data.frame(EVTYPE2=names(sd.health.sum), 
+                            HEALTHDAMAGES=sd.health.sum, row.names=NULL)
+sd.health.sum &lt;- sd.health.sum[order(sd.health.sum$HEALTHDAMAGES, 
+                                     decreasing=TRUE), ]
+xt &lt;- xtable(sd.health.sum)
+print(xt, type=&quot;html&quot;, include.rownames=FALSE)
+</code></pre>
+
+<!-- html table generated in R 3.0.3 by xtable 1.7-3 package -->
+
+<!-- Fri Jul 04 09:38:14 2014 -->
+
+<TABLE border=1>
+<TR> <TH> EVTYPE2 </TH> <TH> HEALTHDAMAGES </TH>  </TR>
+  <TR> <TD> TORNADO </TD> <TD align="right"> 96979.00 </TD> </TR>
+  <TR> <TD> EXCESSIVE HEAT </TD> <TD align="right"> 8428.00 </TD> </TR>
+  <TR> <TD> TSTM WIND </TD> <TD align="right"> 7461.00 </TD> </TR>
+  <TR> <TD> FLOOD </TD> <TD align="right"> 7259.00 </TD> </TR>
+  <TR> <TD> LIGHTNING </TD> <TD align="right"> 6046.00 </TD> </TR>
+  <TR> <TD> HEAT </TD> <TD align="right"> 3037.00 </TD> </TR>
+  <TR> <TD> FLASH FLOOD </TD> <TD align="right"> 2755.00 </TD> </TR>
+  <TR> <TD> ICE STORM </TD> <TD align="right"> 2064.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND </TD> <TD align="right"> 1621.00 </TD> </TR>
+  <TR> <TD> WINTER STORM </TD> <TD align="right"> 1527.00 </TD> </TR>
+  <TR> <TD> HIGH WIND </TD> <TD align="right"> 1385.00 </TD> </TR>
+  <TR> <TD> HAIL </TD> <TD align="right"> 1376.00 </TD> </TR>
+  <TR> <TD> HURRICANE/TYPHOON </TD> <TD align="right"> 1339.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW </TD> <TD align="right"> 1148.00 </TD> </TR>
+  <TR> <TD> WILDFIRE </TD> <TD align="right"> 986.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS </TD> <TD align="right"> 972.00 </TD> </TR>
+  <TR> <TD> BLIZZARD </TD> <TD align="right"> 906.00 </TD> </TR>
+  <TR> <TD> FOG </TD> <TD align="right"> 796.00 </TD> </TR>
+  <TR> <TD> RIP CURRENT </TD> <TD align="right"> 600.00 </TD> </TR>
+  <TR> <TD> WILD/FOREST FIRE </TD> <TD align="right"> 557.00 </TD> </TR>
+  <TR> <TD> HEAT WAVE </TD> <TD align="right"> 551.00 </TD> </TR>
+  <TR> <TD> RIP CURRENTS </TD> <TD align="right"> 501.00 </TD> </TR>
+  <TR> <TD> DUST STORM </TD> <TD align="right"> 462.00 </TD> </TR>
+  <TR> <TD> WINTER WEATHER </TD> <TD align="right"> 431.00 </TD> </TR>
+  <TR> <TD> TROPICAL STORM </TD> <TD align="right"> 398.00 </TD> </TR>
+  <TR> <TD> AVALANCHE </TD> <TD align="right"> 394.00 </TD> </TR>
+  <TR> <TD> EXTREME COLD </TD> <TD align="right"> 393.00 </TD> </TR>
+  <TR> <TD> STRONG WIND </TD> <TD align="right"> 383.00 </TD> </TR>
+  <TR> <TD> DENSE FOG </TD> <TD align="right"> 360.00 </TD> </TR>
+  <TR> <TD> HEAVY RAIN </TD> <TD align="right"> 349.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS </TD> <TD align="right"> 337.00 </TD> </TR>
+  <TR> <TD> HIGH SURF </TD> <TD align="right"> 260.00 </TD> </TR>
+  <TR> <TD> EXTREME HEAT </TD> <TD align="right"> 251.00 </TD> </TR>
+  <TR> <TD> GLAZE </TD> <TD align="right"> 223.00 </TD> </TR>
+  <TR> <TD> TSUNAMI </TD> <TD align="right"> 162.00 </TD> </TR>
+  <TR> <TD> WILD FIRES </TD> <TD align="right"> 153.00 </TD> </TR>
+  <TR> <TD> EXTREME COLD/WIND CHILL </TD> <TD align="right"> 149.00 </TD> </TR>
+  <TR> <TD> ICE </TD> <TD align="right"> 143.00 </TD> </TR>
+  <TR> <TD> WIND </TD> <TD align="right"> 109.00 </TD> </TR>
+  <TR> <TD> COLD/WIND CHILL </TD> <TD align="right"> 107.00 </TD> </TR>
+  <TR> <TD> HURRICANE </TD> <TD align="right"> 107.00 </TD> </TR>
+  <TR> <TD> URBAN/SML STREAM FLD </TD> <TD align="right"> 107.00 </TD> </TR>
+  <TR> <TD> TSTM WIND/HAIL </TD> <TD align="right"> 100.00 </TD> </TR>
+  <TR> <TD> WINTER WEATHER/MIX </TD> <TD align="right"> 100.00 </TD> </TR>
+  <TR> <TD> HEAVY SURF/HIGH SURF </TD> <TD align="right"> 90.00 </TD> </TR>
+  <TR> <TD> LANDSLIDE </TD> <TD align="right"> 90.00 </TD> </TR>
+  <TR> <TD> COLD </TD> <TD align="right"> 86.00 </TD> </TR>
+  <TR> <TD> WINTRY MIX </TD> <TD align="right"> 78.00 </TD> </TR>
+  <TR> <TD> WINTER WEATHER MIX </TD> <TD align="right"> 68.00 </TD> </TR>
+  <TR> <TD> RECORD HEAT </TD> <TD align="right"> 52.00 </TD> </TR>
+  <TR> <TD> STORM SURGE </TD> <TD align="right"> 51.00 </TD> </TR>
+  <TR> <TD> TROPICAL STORM GORDON </TD> <TD align="right"> 51.00 </TD> </TR>
+  <TR> <TD> HEAVY SURF </TD> <TD align="right"> 48.00 </TD> </TR>
+  <TR> <TD> DUST DEVIL </TD> <TD align="right"> 45.00 </TD> </TR>
+  <TR> <TD> WATERSPOUT/TORNADO </TD> <TD align="right"> 45.00 </TD> </TR>
+  <TR> <TD> SNOW SQUALL </TD> <TD align="right"> 37.00 </TD> </TR>
+  <TR> <TD> ICY ROADS </TD> <TD align="right"> 36.00 </TD> </TR>
+  <TR> <TD> MARINE STRONG WIND </TD> <TD align="right"> 36.00 </TD> </TR>
+  <TR> <TD> MARINE THUNDERSTORM WIND </TD> <TD align="right"> 36.00 </TD> </TR>
+  <TR> <TD> SNOW </TD> <TD align="right"> 36.00 </TD> </TR>
+  <TR> <TD> SNOW/HIGH WINDS </TD> <TD align="right"> 36.00 </TD> </TR>
+  <TR> <TD> FLOOD/FLASH FLOOD </TD> <TD align="right"> 32.00 </TD> </TR>
+  <TR> <TD> WATERSPOUT </TD> <TD align="right"> 32.00 </TD> </TR>
+  <TR> <TD> DRY MICROBURST </TD> <TD align="right"> 31.00 </TD> </TR>
+  <TR> <TD> FREEZING RAIN </TD> <TD align="right"> 30.00 </TD> </TR>
+  <TR> <TD> STRONG WINDS </TD> <TD align="right"> 29.00 </TD> </TR>
+  <TR> <TD> UNSEASONABLY WARM AND DRY </TD> <TD align="right"> 29.00 </TD> </TR>
+  <TR> <TD> MIXED PRECIP </TD> <TD align="right"> 28.00 </TD> </TR>
+  <TR> <TD> UNSEASONABLY WARM </TD> <TD align="right"> 28.00 </TD> </TR>
+  <TR> <TD> FLASH FLOODING </TD> <TD align="right"> 27.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORMW </TD> <TD align="right"> 27.00 </TD> </TR>
+  <TR> <TD> WINTER STORMS </TD> <TD align="right"> 27.00 </TD> </TR>
+  <TR> <TD> BLACK ICE </TD> <TD align="right"> 25.00 </TD> </TR>
+  <TR> <TD> TORNADOES, TSTM WIND, HAIL </TD> <TD align="right"> 25.00 </TD> </TR>
+  <TR> <TD> EXCESSIVE RAINFALL </TD> <TD align="right"> 23.00 </TD> </TR>
+  <TR> <TD> HIGH WIND AND SEAS </TD> <TD align="right"> 23.00 </TD> </TR>
+  <TR> <TD> EXTREME WINDCHILL </TD> <TD align="right"> 22.00 </TD> </TR>
+  <TR> <TD> HEAT WAVE DROUGHT </TD> <TD align="right"> 19.00 </TD> </TR>
+  <TR> <TD> FREEZING DRIZZLE </TD> <TD align="right"> 17.00 </TD> </TR>
+  <TR> <TD> MARINE TSTM WIND </TD> <TD align="right"> 17.00 </TD> </TR>
+  <TR> <TD> RECORD/EXCESSIVE HEAT </TD> <TD align="right"> 17.00 </TD> </TR>
+  <TR> <TD> BLOWING SNOW </TD> <TD align="right"> 16.00 </TD> </TR>
+  <TR> <TD> STORM SURGE/TIDE </TD> <TD align="right"> 16.00 </TD> </TR>
+  <TR> <TD> TORNADO F2 </TD> <TD align="right"> 16.00 </TD> </TR>
+  <TR> <TD> WINTER STORM HIGH WINDS </TD> <TD align="right"> 16.00 </TD> </TR>
+  <TR> <TD> GLAZE/ICE STORM </TD> <TD align="right"> 15.00 </TD> </TR>
+  <TR> <TD> GUSTY WINDS </TD> <TD align="right"> 15.00 </TD> </TR>
+  <TR> <TD> COLD AND SNOW </TD> <TD align="right"> 14.00 </TD> </TR>
+  <TR> <TD> FLASH FLOOD/FLOOD </TD> <TD align="right"> 14.00 </TD> </TR>
+  <TR> <TD> HIGH SEAS </TD> <TD align="right"> 13.00 </TD> </TR>
+  <TR> <TD> ROUGH SEAS </TD> <TD align="right"> 13.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM </TD> <TD align="right"> 13.00 </TD> </TR>
+  <TR> <TD> MARINE MISHAP </TD> <TD align="right"> 12.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/ICE </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> SMALL HAIL </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM  WINDS </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS/SNOW </TD> <TD align="right"> 9.00 </TD> </TR>
+  <TR> <TD> FLOODING </TD> <TD align="right"> 8.00 </TD> </TR>
+  <TR> <TD> HURRICANE ERIN </TD> <TD align="right"> 7.00 </TD> </TR>
+  <TR> <TD> HYPOTHERMIA/EXPOSURE </TD> <TD align="right"> 7.00 </TD> </TR>
+  <TR> <TD> LOW TEMPERATURE </TD> <TD align="right"> 7.00 </TD> </TR>
+  <TR> <TD> NON-SEVERE WIND DAMAGE </TD> <TD align="right"> 7.00 </TD> </TR>
+  <TR> <TD> MUDSLIDE </TD> <TD align="right"> 6.00 </TD> </TR>
+  <TR> <TD> RAIN/SNOW </TD> <TD align="right"> 6.00 </TD> </TR>
+  <TR> <TD> COASTAL FLOOD </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> COASTAL FLOODING/EROSION </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> COASTAL STORM </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> COLD WEATHER </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> FLASH FLOODING/FLOOD </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> HEAT WAVES </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> RIP CURRENTS/HEAVY SURF </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> ROUGH SURF </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> SNOW AND ICE </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> TYPHOON </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> DROUGHT </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD> FROST </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD> HEAVY RAINS </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD> HIGH WIND/SEAS </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS/COLD </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD> OTHER </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD> RIVER FLOOD </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDSS </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD> TORRENTIAL RAINFALL </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD> COASTAL FLOODING </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> COLD WAVE </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> FUNNEL CLOUD </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> HEAVY SEAS </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> HEAVY SURF AND WIND </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> HIGH WATER </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> LIGHT SNOW </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> MARINE ACCIDENT </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> RIVER FLOODING </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> TSTM WIND (G45) </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> BRUSH FIRE </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> COLD TEMPERATURE </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> DROUGHT/EXCESSIVE HEAT </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> EXCESSIVE SNOW </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> FALLING SNOW/ICE </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> FLASH FLOODS </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> FOG AND COLD TEMPERATURES </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> GUSTY WIND </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW AND HIGH WINDS </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW SHOWER </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> HURRICANE-GENERATED SWELLS </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> HURRICANE EDOUARD </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> HURRICANE OPAL </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> HURRICANE OPAL/HIGH WINDS </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> ICE STORM/FLASH FLOOD </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> LANDSLIDES </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> MARINE HIGH WIND </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> ROGUE WAVE </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> SLEET </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> THUNDERSNOW </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> TORNADO F3 </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> UNSEASONABLY COLD </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> WARM WEATHER </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> WINDS </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD> AVALANCE </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> COASTALSTORM </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> COLD/WINDS </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> DROWNING </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> DRY MIRCOBURST WINDS </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> EXTENDED COLD </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> FLOOD &amp; HEAVY RAIN </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> FLOOD/RIVER FLOOD </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> FREEZE </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> FREEZING RAIN/SNOW </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> FREEZING SPRAY </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HAZARDOUS SURF </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/BLIZZARD/AVALANCHE </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HIGH </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HIGH SWELLS </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HIGH WAVES </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HIGH WIND 48 </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HIGH WIND/HEAVY SNOW </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HURRICANE EMILY </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HURRICANE FELIX </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HYPERTHERMIA/EXPOSURE </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HYPOTHERMIA </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> ICE ON ROAD </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> ICE ROADS </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> LIGHTNING AND THUNDERSTORM WIN </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> LIGHTNING INJURY </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> LIGHTNING. </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> MINOR FLOODING </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> MUDSLIDES </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> NON TSTM WIND </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> RAIN/WIND </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> RAPIDLY RISING WATER </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> RECORD COLD </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> SNOW SQUALLS </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> SNOW/ BITTER COLD </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND (G40) </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND G52 </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS 13 </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS/HAIL </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORMS WINDS </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> THUNDERTORM WINDS </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> TIDAL FLOODING </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> TSTM WIND (G35) </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> TSTM WIND (G40) </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> URBAN AND SMALL STREAM FLOODIN </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> WATERSPOUT TORNADO </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> WHIRLWIND </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> WIND STORM </TD> <TD align="right"> 1.00 </TD> </TR>
+   </TABLE>
+
+<h3>Processing Economic Affects</h3>
+
+<p>Subset the storm data to extract economic affects</p>
+
+<pre><code class="r">sd.econ &lt;- storm.data[storm.data$PROPDMG &gt; 0 | storm.data$CROPDMG &gt; 0, 
+                         c(&quot;EVTYPE&quot;, &quot;PROPDMG&quot;,&quot;PROPDMGEXP&quot;, &quot;CROPDMG&quot;,&quot;CROPDMGEXP&quot;)]
+sd.econ$EVTYPE2 &lt;- as.factor(toupper(sd.econ$EVTYPE))    
+</code></pre>
+
+<p>Calculate economic damages (DMGCASH).  </p>
+
+<p>The numeric values and its multiple are present in different columns. The multipler can be either character (e.g &ldquo;H&rdquo;, &ldquo;K&rdquo;, &ldquo;M&rdquo; or &ldquo;B&rdquo; for hunderds, thousands, millions or billions) or exponent values. We assume the multiplier == 1 when it does not fall into either of the above two classes. </p>
+
+<pre><code class="r">sd.econ$PROPDMGEXP &lt;- as.factor(toupper(as.character(sd.econ$PROPDMGEXP)))
+sd.econ$CROPDMGEXP &lt;- as.factor(toupper(as.character(sd.econ$CROPDMGEXP)))
+
+dvals &lt;- unique(union(sd.econ$PROPDMGEXP, sd.econ$CROPDMGEXP))
+DMGEXP &lt;- as.integer(dvals)
+names(DMGEXP) &lt;- dvals
+DMGEXP[names(DMGEXP) %in% c(&quot;&quot;, &quot;+&quot;, &quot;-&quot;, &quot;?&quot;)] &lt;- 0
+DMGEXP[&quot;H&quot;] &lt;- 2
+DMGEXP[&quot;K&quot;] &lt;- 3
+DMGEXP[&quot;M&quot;] &lt;- 6
+DMGEXP[&quot;B&quot;] &lt;- 9
+
+sd.econ$PROPDMGCASH &lt;- sd.econ$PROPDMG * (10 ^ DMGEXP[sd.econ$PROPDMGEXP])
+sd.econ$CROPDMGCASH &lt;- sd.econ$CROPDMG * (10 ^ DMGEXP[sd.econ$CROPDMGEXP])
+sd.econ$DMGCASH &lt;- sd.econ$CROPDMGCASH + sd.econ$PROPDMGCASH
+#sum(is.na(sd.econ$DMGCASH))
+sd.econ.sum &lt;- tapply(sd.econ$DMGCASH, sd.econ$EVTYPE2, sum)
+sd.econ.sum &lt;- data.frame(EVTYPE2=names(sd.econ.sum),
+                          DMGCASH=sd.econ.sum, row.names=NULL)
+sd.econ.sum &lt;- sd.econ.sum[order(sd.econ.sum$DMGCASH, decreasing=TRUE), ]
+xt &lt;- xtable(sd.econ.sum)
+print(xt, type=&quot;html&quot;, include.rownames=FALSE)
+</code></pre>
+
+<!-- html table generated in R 3.0.3 by xtable 1.7-3 package -->
+
+<!-- Fri Jul 04 09:38:15 2014 -->
+
+<TABLE border=1>
+<TR> <TH> EVTYPE2 </TH> <TH> DMGCASH </TH>  </TR>
+  <TR> <TD> TORNADO </TD> <TD align="right"> 223265832475.70 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS </TD> <TD align="right"> 80675808972.16 </TD> </TR>
+  <TR> <TD> HAIL </TD> <TD align="right"> 20755759966.14 </TD> </TR>
+  <TR> <TD> HIGH WIND </TD> <TD align="right"> 20336067322.21 </TD> </TR>
+  <TR> <TD> BREAKUP FLOODING </TD> <TD align="right"> 20000000000.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS </TD> <TD align="right"> 15054979042.95 </TD> </TR>
+  <TR> <TD> FLOODING/HEAVY RAIN </TD> <TD align="right"> 2000000000.00 </TD> </TR>
+  <TR> <TD> FLASH FLOOD </TD> <TD align="right"> 1424858606.94 </TD> </TR>
+  <TR> <TD> TSTM WIND </TD> <TD align="right"> 1332900849.77 </TD> </TR>
+  <TR> <TD> FLOOD </TD> <TD align="right"> 878738367.06 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND </TD> <TD align="right"> 874162682.48 </TD> </TR>
+  <TR> <TD> LIGHTNING </TD> <TD align="right"> 620066332.91 </TD> </TR>
+  <TR> <TD> WINTER STORM </TD> <TD align="right"> 131161287.33 </TD> </TR>
+  <TR> <TD> HEAVY SNOW </TD> <TD align="right"> 123142116.87 </TD> </TR>
+  <TR> <TD> WILDFIRE </TD> <TD align="right"> 80822112.50 </TD> </TR>
+  <TR> <TD> STRONG WIND </TD> <TD align="right"> 62901179.26 </TD> </TR>
+  <TR> <TD> ICE STORM </TD> <TD align="right"> 62073431.81 </TD> </TR>
+  <TR> <TD> HEAVY RAIN </TD> <TD align="right"> 50209856.85 </TD> </TR>
+  <TR> <TD> TROPICAL STORM </TD> <TD align="right"> 45919472.10 </TD> </TR>
+  <TR> <TD> WILD/FOREST FIRE </TD> <TD align="right"> 37885303.49 </TD> </TR>
+  <TR> <TD> FLASH FLOODING </TD> <TD align="right"> 28223005.60 </TD> </TR>
+  <TR> <TD> URBAN/SML STREAM FLD </TD> <TD align="right"> 26022476.09 </TD> </TR>
+  <TR> <TD> BLIZZARD </TD> <TD align="right"> 24684756.53 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND G50 </TD> <TD align="right"> 20000000.00 </TD> </TR>
+  <TR> <TD> FLOOD/FLASH FLOOD </TD> <TD align="right"> 19210589.75 </TD> </TR>
+  <TR> <TD> LANDSLIDE </TD> <TD align="right"> 18656342.94 </TD> </TR>
+  <TR> <TD> STORM SURGE </TD> <TD align="right"> 18611005.93 </TD> </TR>
+  <TR> <TD> LAKE-EFFECT SNOW </TD> <TD align="right"> 14115026.00 </TD> </TR>
+  <TR> <TD> RIVER FLOOD </TD> <TD align="right"> 13749595.20 </TD> </TR>
+  <TR> <TD> COASTAL FLOOD </TD> <TD align="right"> 13290806.28 </TD> </TR>
+  <TR> <TD> URBAN FLOOD </TD> <TD align="right"> 13288928.50 </TD> </TR>
+  <TR> <TD> WINTER WEATHER </TD> <TD align="right"> 11966023.90 </TD> </TR>
+  <TR> <TD> FLOODING </TD> <TD align="right"> 11268463.90 </TD> </TR>
+  <TR> <TD> HURRICANE </TD> <TD align="right"> 9361078.28 </TD> </TR>
+  <TR> <TD> WATERSPOUT </TD> <TD align="right"> 9353700.00 </TD> </TR>
+  <TR> <TD> FOG </TD> <TD align="right"> 8845504.31 </TD> </TR>
+  <TR> <TD> TSTM WIND/HAIL </TD> <TD align="right"> 8339892.65 </TD> </TR>
+  <TR> <TD> DENSE FOG </TD> <TD align="right"> 8224001.45 </TD> </TR>
+  <TR> <TD> ICE </TD> <TD align="right"> 7655005.00 </TD> </TR>
+  <TR> <TD> EXTREME COLD </TD> <TD align="right"> 7603601.28 </TD> </TR>
+  <TR> <TD> STORM SURGE/TIDE </TD> <TD align="right"> 6139885.05 </TD> </TR>
+  <TR> <TD> URBAN FLOODING </TD> <TD align="right"> 5605966.50 </TD> </TR>
+  <TR> <TD> DUST STORM </TD> <TD align="right"> 5050602.00 </TD> </TR>
+  <TR> <TD> WINTER WEATHER/MIX </TD> <TD align="right"> 4872001.50 </TD> </TR>
+  <TR> <TD> COASTAL FLOODING </TD> <TD align="right"> 4345684.62 </TD> </TR>
+  <TR> <TD> HIGH SURF </TD> <TD align="right"> 3335086.62 </TD> </TR>
+  <TR> <TD> DROUGHT </TD> <TD align="right"> 3090941.67 </TD> </TR>
+  <TR> <TD> SNOW </TD> <TD align="right"> 3057571.77 </TD> </TR>
+  <TR> <TD> FREEZING RAIN </TD> <TD align="right"> 2946505.20 </TD> </TR>
+  <TR> <TD> WIND </TD> <TD align="right"> 2654806.04 </TD> </TR>
+  <TR> <TD> EXTREME COLD/WIND CHILL </TD> <TD align="right"> 2648056.00 </TD> </TR>
+  <TR> <TD> LIGHT SNOW </TD> <TD align="right"> 2513000.00 </TD> </TR>
+  <TR> <TD> MARINE TSTM WIND </TD> <TD align="right"> 2421003.00 </TD> </TR>
+  <TR> <TD> HEAVY RAINS </TD> <TD align="right"> 2285620.00 </TD> </TR>
+  <TR> <TD> COLD/WIND CHILL </TD> <TD align="right"> 1990600.00 </TD> </TR>
+  <TR> <TD> HURRICANE/TYPHOON </TD> <TD align="right"> 1985152.35 </TD> </TR>
+  <TR> <TD> EXCESSIVE SNOW </TD> <TD align="right"> 1935000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDSS </TD> <TD align="right"> 1835709.55 </TD> </TR>
+  <TR> <TD> FLASH FLOODING/FLOOD </TD> <TD align="right"> 1750175.00 </TD> </TR>
+  <TR> <TD> DRY MICROBURST </TD> <TD align="right"> 1732620.00 </TD> </TR>
+  <TR> <TD> FLASH FLOODS </TD> <TD align="right"> 1628507.10 </TD> </TR>
+  <TR> <TD> AVALANCHE </TD> <TD align="right"> 1621802.10 </TD> </TR>
+  <TR> <TD> FLASH FLOOD/FLOOD </TD> <TD align="right"> 1556825.90 </TD> </TR>
+  <TR> <TD> EXCESSIVE HEAT </TD> <TD align="right"> 1454200.70 </TD> </TR>
+  <TR> <TD> HEAVY SURF </TD> <TD align="right"> 1440000.00 </TD> </TR>
+  <TR> <TD> HEAVY SURF/HIGH SURF </TD> <TD align="right"> 1370008.50 </TD> </TR>
+  <TR> <TD> GUSTY WINDS </TD> <TD align="right"> 1281200.00 </TD> </TR>
+  <TR> <TD> HEAT WAVE </TD> <TD align="right"> 1260314.50 </TD> </TR>
+  <TR> <TD> STRONG WINDS </TD> <TD align="right"> 1214796.20 </TD> </TR>
+  <TR> <TD> RIVER AND STREAM FLOOD </TD> <TD align="right"> 1200000.00 </TD> </TR>
+  <TR> <TD> WATERSPOUT/TORNADO </TD> <TD align="right"> 1110050.00 </TD> </TR>
+  <TR> <TD> FLOODS </TD> <TD align="right"> 1000055.00 </TD> </TR>
+  <TR> <TD> RECORD SNOW </TD> <TD align="right"> 1000000.00 </TD> </TR>
+  <TR> <TD> SNOW/COLD </TD> <TD align="right"> 1000000.00 </TD> </TR>
+  <TR> <TD> SEICHE </TD> <TD align="right"> 980000.00 </TD> </TR>
+  <TR> <TD> FROST/FREEZE </TD> <TD align="right"> 967143.66 </TD> </TR>
+  <TR> <TD> ASTRONOMICAL HIGH TIDE </TD> <TD align="right"> 925008.50 </TD> </TR>
+  <TR> <TD> THUNDERSTORM </TD> <TD align="right"> 920551.00 </TD> </TR>
+  <TR> <TD> TORNADO F1 </TD> <TD align="right"> 870001.50 </TD> </TR>
+  <TR> <TD> HEAVY RAINS/FLOODING </TD> <TD align="right"> 860357.00 </TD> </TR>
+  <TR> <TD> HURRICANE OPAL </TD> <TD align="right"> 846401.00 </TD> </TR>
+  <TR> <TD> TYPHOON </TD> <TD align="right"> 831424.40 </TD> </TR>
+  <TR> <TD> MIXED PRECIPITATION </TD> <TD align="right"> 790000.00 </TD> </TR>
+  <TR> <TD> COASTAL EROSION </TD> <TD align="right"> 766000.00 </TD> </TR>
+  <TR> <TD> TSUNAMI </TD> <TD align="right"> 762163.30 </TD> </TR>
+  <TR> <TD> EXTREME WINDCHILL </TD> <TD align="right"> 755017.00 </TD> </TR>
+  <TR> <TD> TROPICAL DEPRESSION </TD> <TD align="right"> 737001.00 </TD> </TR>
+  <TR> <TD> TORNADO F3 </TD> <TD align="right"> 725000.00 </TD> </TR>
+  <TR> <TD> DUST DEVIL </TD> <TD align="right"> 718630.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS HAIL </TD> <TD align="right"> 705049.00 </TD> </TR>
+  <TR> <TD> HEAVY MIX </TD> <TD align="right"> 705000.60 </TD> </TR>
+  <TR> <TD> HEAVY SNOW SQUALLS </TD> <TD align="right"> 695000.00 </TD> </TR>
+  <TR> <TD> SNOW SQUALL </TD> <TD align="right"> 680000.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/ICE </TD> <TD align="right"> 655000.00 </TD> </TR>
+  <TR> <TD> THUNDERTORM WINDS </TD> <TD align="right"> 606000.00 </TD> </TR>
+  <TR> <TD> MUD SLIDE </TD> <TD align="right"> 600100.00 </TD> </TR>
+  <TR> <TD> TROPICAL STORM JERRY </TD> <TD align="right"> 600020.00 </TD> </TR>
+  <TR> <TD> TORNADO F2 </TD> <TD align="right"> 600001.00 </TD> </TR>
+  <TR> <TD> HEAVY RAIN AND FLOOD </TD> <TD align="right"> 600000.00 </TD> </TR>
+  <TR> <TD> LANDSLUMP </TD> <TD align="right"> 570000.00 </TD> </TR>
+  <TR> <TD> COLD </TD> <TD align="right"> 554000.00 </TD> </TR>
+  <TR> <TD> ICE JAM FLOODING </TD> <TD align="right"> 516010.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORMS WINDS </TD> <TD align="right"> 513051.00 </TD> </TR>
+  <TR> <TD> HIGH WATER </TD> <TD align="right"> 505000.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS/COLD </TD> <TD align="right"> 502115.00 </TD> </TR>
+  <TR> <TD> WILDFIRES </TD> <TD align="right"> 500600.00 </TD> </TR>
+  <TR> <TD> HURRICANE FELIX </TD> <TD align="right"> 500500.00 </TD> </TR>
+  <TR> <TD> TROPICAL STORM GORDON </TD> <TD align="right"> 500500.00 </TD> </TR>
+  <TR> <TD> WINTER STORMS </TD> <TD align="right"> 500500.00 </TD> </TR>
+  <TR> <TD> RECORD COLD </TD> <TD align="right"> 500055.50 </TD> </TR>
+  <TR> <TD> HAIL/WINDS </TD> <TD align="right"> 500050.05 </TD> </TR>
+  <TR> <TD> SEVERE THUNDERSTORMS </TD> <TD align="right"> 500018.50 </TD> </TR>
+  <TR> <TD> BLIZZARD/WINTER STORM </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> COASTAL SURGE </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> FLASH FLOOD/ </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> FLASH FLOODING/THUNDERSTORM WI </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> FLOOD/RIVER FLOOD </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> FROST\FREEZE </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> HEAVY LAKE SNOW </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> HEAVY PRECIPITATION </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> HEAVY RAIN/SNOW </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/WINTER STORM </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> HIGH WIND/SEAS </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> HURRICANE GORDON </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> SLEET/ICE STORM </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> SNOW AND ICE STORM </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> SNOW/HEAVY SNOW </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> VOLCANIC ASH </TD> <TD align="right"> 500000.00 </TD> </TR>
+  <TR> <TD> LIGHT FREEZING RAIN </TD> <TD align="right"> 451000.00 </TD> </TR>
+  <TR> <TD> MICROBURST WINDS </TD> <TD align="right"> 450000.00 </TD> </TR>
+  <TR> <TD> MARINE THUNDERSTORM WIND </TD> <TD align="right"> 436450.00 </TD> </TR>
+  <TR> <TD> MARINE STRONG WIND </TD> <TD align="right"> 418330.00 </TD> </TR>
+  <TR> <TD> TROPICAL STORM DEAN </TD> <TD align="right"> 400050.00 </TD> </TR>
+  <TR> <TD> GLAZE </TD> <TD align="right"> 400000.60 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS/HAIL </TD> <TD align="right"> 365030.00 </TD> </TR>
+  <TR> <TD> SEVERE THUNDERSTORM </TD> <TD align="right"> 360125.20 </TD> </TR>
+  <TR> <TD> GUSTY WIND </TD> <TD align="right"> 360010.00 </TD> </TR>
+  <TR> <TD> ICY ROADS </TD> <TD align="right"> 341200.00 </TD> </TR>
+  <TR> <TD> ASTRONOMICAL LOW TIDE </TD> <TD align="right"> 320000.00 </TD> </TR>
+  <TR> <TD> RIVER FLOODING </TD> <TD align="right"> 305327.83 </TD> </TR>
+  <TR> <TD> SNOW FREEZING RAIN </TD> <TD align="right"> 305001.00 </TD> </TR>
+  <TR> <TD> RAIN </TD> <TD align="right"> 300805.00 </TD> </TR>
+  <TR> <TD> WIND STORM </TD> <TD align="right"> 300000.00 </TD> </TR>
+  <TR> <TD> HEAT </TD> <TD align="right"> 297664.20 </TD> </TR>
+  <TR> <TD> MARINE HIGH WIND </TD> <TD align="right"> 297011.00 </TD> </TR>
+  <TR> <TD> MUDSLIDE </TD> <TD align="right"> 275001.00 </TD> </TR>
+  <TR> <TD> FLASH FLOOD FROM ICE JAMS </TD> <TD align="right"> 250000.00 </TD> </TR>
+  <TR> <TD> SNOW SQUALLS </TD> <TD align="right"> 235000.50 </TD> </TR>
+  <TR> <TD> TSTM WIND (G45) </TD> <TD align="right"> 221500.00 </TD> </TR>
+  <TR> <TD> WATERSPOUT- </TD> <TD align="right"> 210500.00 </TD> </TR>
+  <TR> <TD> FREEZE </TD> <TD align="right"> 205931.25 </TD> </TR>
+  <TR> <TD> HEAT WAVE DROUGHT </TD> <TD align="right"> 200050.00 </TD> </TR>
+  <TR> <TD>    HIGH SURF ADVISORY </TD> <TD align="right"> 200000.00 </TD> </TR>
+  <TR> <TD> STORM FORCE WINDS </TD> <TD align="right"> 200000.00 </TD> </TR>
+  <TR> <TD> FUNNEL CLOUD </TD> <TD align="right"> 194600.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS LIGHTNING </TD> <TD align="right"> 190505.00 </TD> </TR>
+  <TR> <TD> FREEZING FOG </TD> <TD align="right"> 182002.00 </TD> </TR>
+  <TR> <TD> LATE SEASON SNOW </TD> <TD align="right"> 180000.00 </TD> </TR>
+  <TR> <TD> SEVERE THUNDERSTORM WINDS </TD> <TD align="right"> 175029.00 </TD> </TR>
+  <TR> <TD> RIP CURRENTS </TD> <TD align="right"> 162000.00 </TD> </TR>
+  <TR> <TD> HAIL DAMAGE </TD> <TD align="right"> 150000.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS/SNOW </TD> <TD align="right"> 150000.00 </TD> </TR>
+  <TR> <TD> ROCK SLIDE </TD> <TD align="right"> 150000.00 </TD> </TR>
+  <TR> <TD> WINDS </TD> <TD align="right"> 146006.00 </TD> </TR>
+  <TR> <TD> FREEZING DRIZZLE </TD> <TD align="right"> 145000.00 </TD> </TR>
+  <TR> <TD> HAIL 275 </TD> <TD align="right"> 125000.10 </TD> </TR>
+  <TR> <TD> THUNDERSTORMW </TD> <TD align="right"> 125000.00 </TD> </TR>
+  <TR> <TD> LANDSLIDES </TD> <TD align="right"> 105000.00 </TD> </TR>
+  <TR> <TD> GUSTNADO </TD> <TD align="right"> 102051.55 </TD> </TR>
+  <TR> <TD> WILD FIRES </TD> <TD align="right"> 100624.00 </TD> </TR>
+  <TR> <TD> HURRICANE ERIN </TD> <TD align="right"> 100404.00 </TD> </TR>
+  <TR> <TD>  TSTM WIND </TD> <TD align="right"> 100008.00 </TD> </TR>
+  <TR> <TD> BEACH EROSION </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> DENSE SMOKE </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> EXTENDED COLD </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> GROUND BLIZZARD </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/SQUALLS </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> ICE FLOES </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> SNOW AND HEAVY SNOW </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> SNOW/HIGH WINDS </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> SNOW/ICE STORM </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> SNOW/SLEET/FREEZING RAIN </TD> <TD align="right"> 100000.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW-SQUALLS </TD> <TD align="right"> 88000.00 </TD> </TR>
+  <TR> <TD> WIND DAMAGE </TD> <TD align="right"> 87055.00 </TD> </TR>
+  <TR> <TD> LIGHT SNOWFALL </TD> <TD align="right"> 85000.00 </TD> </TR>
+  <TR> <TD> MICROBURST </TD> <TD align="right"> 80000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND AND LIGHTNING </TD> <TD align="right"> 80000.00 </TD> </TR>
+  <TR> <TD> TORNADO F0 </TD> <TD align="right"> 76207.20 </TD> </TR>
+  <TR> <TD> HURRICANE-GENERATED SWELLS </TD> <TD align="right"> 75000.00 </TD> </TR>
+  <TR> <TD> TUNDERSTORM WIND </TD> <TD align="right"> 75000.00 </TD> </TR>
+  <TR> <TD> SMALL HAIL </TD> <TD align="right"> 71732.08 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND 60 MPH </TD> <TD align="right"> 70000.00 </TD> </TR>
+  <TR> <TD> LAKE EFFECT SNOW </TD> <TD align="right"> 67000.00 </TD> </TR>
+  <TR> <TD> WINTER WEATHER MIX </TD> <TD align="right"> 60000.00 </TD> </TR>
+  <TR> <TD> TSTM WINDS </TD> <TD align="right"> 59000.00 </TD> </TR>
+  <TR> <TD> OTHER </TD> <TD align="right"> 56534.40 </TD> </TR>
+  <TR> <TD> BRUSH FIRE </TD> <TD align="right"> 55000.00 </TD> </TR>
+  <TR> <TD> URBAN/SMALL STREAM FLOOD </TD> <TD align="right"> 51050.00 </TD> </TR>
+  <TR> <TD> DUST STORM/HIGH WINDS </TD> <TD align="right"> 50500.00 </TD> </TR>
+  <TR> <TD> SNOWMELT FLOODING </TD> <TD align="right"> 50005.00 </TD> </TR>
+  <TR> <TD> THUDERSTORM WINDS </TD> <TD align="right"> 50005.00 </TD> </TR>
+  <TR> <TD> SNOW/SLEET </TD> <TD align="right"> 50001.30 </TD> </TR>
+  <TR> <TD>  FLASH FLOOD </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> COASTAL STORM </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> EXTREME WIND CHILL </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> FLASH FLOOD LANDSLIDES </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> FREEZING RAIN/SLEET </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/BLIZZARD </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/WIND </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> HEAVY SURF COASTAL FLOODING </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> HIGH WIND AND SEAS </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> HIGH WIND/BLIZZARD </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> HIGH WIND/HEAVY SNOW </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS/ </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> MARINE ACCIDENT </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> MUD SLIDES </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> MUDSLIDES </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> RAINSTORM </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> SEVERE TURBULENCE </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> SNOW/ BITTER COLD </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> SNOW/BLOWING SNOW </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> THUNDERSNOW </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS 13 </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS53 </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> TSTMW </TD> <TD align="right"> 50000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND (G40) </TD> <TD align="right"> 45000.00 </TD> </TR>
+  <TR> <TD> LAKESHORE FLOOD </TD> <TD align="right"> 40007.50 </TD> </TR>
+  <TR> <TD> NON-TSTM WIND </TD> <TD align="right"> 40000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDSHAIL </TD> <TD align="right"> 40000.00 </TD> </TR>
+  <TR> <TD> WATERSPOUT TORNADO </TD> <TD align="right"> 40000.00 </TD> </TR>
+  <TR> <TD> GRADIENT WIND </TD> <TD align="right"> 37000.00 </TD> </TR>
+  <TR> <TD> WET MICROBURST </TD> <TD align="right"> 35000.00 </TD> </TR>
+  <TR> <TD> LAKE FLOOD </TD> <TD align="right"> 30000.00 </TD> </TR>
+  <TR> <TD> LIGHTNING  WAUSEON </TD> <TD align="right"> 30000.00 </TD> </TR>
+  <TR> <TD> SNOW/ICE </TD> <TD align="right"> 30000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND (G35) </TD> <TD align="right"> 30000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND 55 </TD> <TD align="right"> 30000.00 </TD> </TR>
+  <TR> <TD> LIGHTNING AND HEAVY RAIN </TD> <TD align="right"> 28000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM  WINDS </TD> <TD align="right"> 25000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND 98 MPH </TD> <TD align="right"> 25000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS 63 MPH </TD> <TD align="right"> 25000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS/ FLOOD </TD> <TD align="right"> 20030.00 </TD> </TR>
+  <TR> <TD> WILD/FOREST FIRES </TD> <TD align="right"> 20012.00 </TD> </TR>
+  <TR> <TD> HAIL 175 </TD> <TD align="right"> 20000.10 </TD> </TR>
+  <TR> <TD> BLOWING DUST </TD> <TD align="right"> 20000.00 </TD> </TR>
+  <TR> <TD> GUSTY WIND/HAIL </TD> <TD align="right"> 20000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND/ TREES </TD> <TD align="right"> 20000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND 65) </TD> <TD align="right"> 20000.00 </TD> </TR>
+  <TR> <TD> HIGH WIND (G40) </TD> <TD align="right"> 18000.00 </TD> </TR>
+  <TR> <TD> FROST </TD> <TD align="right"> 16065.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORMS WIND </TD> <TD align="right"> 15505.00 </TD> </TR>
+  <TR> <TD> HIGH SEAS </TD> <TD align="right"> 15500.00 </TD> </TR>
+  <TR> <TD> BLOWING SNOW </TD> <TD align="right"> 15000.00 </TD> </TR>
+  <TR> <TD> HEAVY SWELLS </TD> <TD align="right"> 15000.00 </TD> </TR>
+  <TR> <TD> WATERSPOUT-TORNADO </TD> <TD align="right"> 15000.00 </TD> </TR>
+  <TR> <TD> TIDAL FLOODING </TD> <TD align="right"> 13000.00 </TD> </TR>
+  <TR> <TD> WINTRY MIX </TD> <TD align="right"> 12500.00 </TD> </TR>
+  <TR> <TD> FLASH FLOOD - HEAVY RAIN </TD> <TD align="right"> 12000.00 </TD> </TR>
+  <TR> <TD> ICE ROADS </TD> <TD align="right"> 12000.00 </TD> </TR>
+  <TR> <TD> WHIRLWIND </TD> <TD align="right"> 12000.00 </TD> </TR>
+  <TR> <TD> FLOOD/FLASH/FLOOD </TD> <TD align="right"> 10000.00 </TD> </TR>
+  <TR> <TD> GRASS FIRES </TD> <TD align="right"> 10000.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW SHOWER </TD> <TD align="right"> 10000.00 </TD> </TR>
+  <TR> <TD> HIGH WIND 48 </TD> <TD align="right"> 10000.00 </TD> </TR>
+  <TR> <TD> LIGHTNING THUNDERSTORM WINDS </TD> <TD align="right"> 10000.00 </TD> </TR>
+  <TR> <TD> ROUGH SURF </TD> <TD align="right"> 10000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND 45 </TD> <TD align="right"> 10000.00 </TD> </TR>
+  <TR> <TD>  TSTM WIND (G45) </TD> <TD align="right"> 8000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND (41) </TD> <TD align="right"> 8000.00 </TD> </TR>
+  <TR> <TD> LANDSPOUT </TD> <TD align="right"> 7000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM HAIL </TD> <TD align="right"> 5050.00 </TD> </TR>
+  <TR> <TD> HAIL 100 </TD> <TD align="right"> 5010.00 </TD> </TR>
+  <TR> <TD> EXTREME HEAT </TD> <TD align="right"> 5005.11 </TD> </TR>
+  <TR> <TD> THUNDERSTORMS </TD> <TD align="right"> 5005.00 </TD> </TR>
+  <TR> <TD> FREEZING RAIN/SNOW </TD> <TD align="right"> 5000.07 </TD> </TR>
+  <TR> <TD> ? </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> APACHE COUNTY </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> FLOOD FLASH </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> FLOOD/FLASHFLOOD </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> HEAVY RAIN/SMALL STREAM URBAN </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> HIGH SWELLS </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS/HEAVY RAIN </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> ICE JAM </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> LIGHTING </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> LIGHTNING/HEAVY RAIN </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> LIGNTNING </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> MINOR FLOODING </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> MUD SLIDES URBAN FLOODING </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> NON-SEVERE WIND DAMAGE </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> SNOW ACCUMULATION </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> SNOW/ ICE </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> THUNDEERSTORM WINDS </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND G55 </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND/LIGHTNING </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS AND </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS. </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS/FLOODING </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS/FUNNEL CLOU </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTROM WIND </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND  (G45) </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND DAMAGE </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> URBAN AND SMALL </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> URBAN/SMALL STREAM </TD> <TD align="right"> 5000.00 </TD> </TR>
+  <TR> <TD> GLAZE ICE </TD> <TD align="right"> 4501.10 </TD> </TR>
+  <TR> <TD> MARINE HAIL </TD> <TD align="right"> 4000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND 65 MPH </TD> <TD align="right"> 4000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND 65MPH </TD> <TD align="right"> 4000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND TREES </TD> <TD align="right"> 4000.00 </TD> </TR>
+  <TR> <TD> HIGH  WINDS </TD> <TD align="right"> 3000.00 </TD> </TR>
+  <TR> <TD> DAM BREAK </TD> <TD align="right"> 2001.00 </TD> </TR>
+  <TR> <TD> DOWNBURST </TD> <TD align="right"> 2000.00 </TD> </TR>
+  <TR> <TD> FLASH FLOOD/ STREET </TD> <TD align="right"> 2000.00 </TD> </TR>
+  <TR> <TD> GUSTY WIND/HVY RAIN </TD> <TD align="right"> 2000.00 </TD> </TR>
+  <TR> <TD> GUSTY WIND/RAIN </TD> <TD align="right"> 2000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM DAMAGE TO </TD> <TD align="right"> 2000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND/AWNING </TD> <TD align="right"> 2000.00 </TD> </TR>
+  <TR> <TD> URBAN FLOODS </TD> <TD align="right"> 1500.00 </TD> </TR>
+  <TR> <TD> RURAL FLOOD </TD> <TD align="right"> 1200.00 </TD> </TR>
+  <TR> <TD> FLASH FLOOD/LANDSLIDE </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> HAIL 0.75 </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> HAIL 75 </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> ICE JAM FLOOD (MINOR </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> RIP CURRENT </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> THUNDERESTORM WINDS </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND/ TREE </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINS </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> THUNERSTORM WINDS </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND 40 </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> TSTM WIND G45 </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> WATERSPOUT/ TORNADO </TD> <TD align="right"> 1000.00 </TD> </TR>
+  <TR> <TD> FOREST FIRES </TD> <TD align="right"> 505.00 </TD> </TR>
+  <TR> <TD> HAIL/WIND </TD> <TD align="right"> 500.10 </TD> </TR>
+  <TR> <TD> DUST DEVIL WATERSPOUT </TD> <TD align="right"> 500.00 </TD> </TR>
+  <TR> <TD> HEAVY SHOWER </TD> <TD align="right"> 500.00 </TD> </TR>
+  <TR> <TD> RECORD RAINFALL </TD> <TD align="right"> 500.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND/HAIL </TD> <TD align="right"> 500.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORMWINDS </TD> <TD align="right"> 500.00 </TD> </TR>
+  <TR> <TD> TORNDAO </TD> <TD align="right"> 500.00 </TD> </TR>
+  <TR> <TD> WIND/HAIL </TD> <TD align="right"> 500.00 </TD> </TR>
+  <TR> <TD> DAMAGING FREEZE </TD> <TD align="right"> 434.10 </TD> </TR>
+  <TR> <TD> FLASH FLOOD WINDS </TD> <TD align="right"> 410.00 </TD> </TR>
+  <TR> <TD> HEAVY RAIN/SEVERE WEATHER </TD> <TD align="right"> 250.00 </TD> </TR>
+  <TR> <TD> HAILSTORM </TD> <TD align="right"> 241.00 </TD> </TR>
+  <TR> <TD> TORNADOES, TSTM WIND, HAIL </TD> <TD align="right"> 162.50 </TD> </TR>
+  <TR> <TD> HIGH TIDES </TD> <TD align="right"> 150.00 </TD> </TR>
+  <TR> <TD> EXCESSIVE WETNESS </TD> <TD align="right"> 142.00 </TD> </TR>
+  <TR> <TD> FLOOD/RAIN/WINDS </TD> <TD align="right"> 112.80 </TD> </TR>
+  <TR> <TD> MAJOR FLOOD </TD> <TD align="right"> 105.00 </TD> </TR>
+  <TR> <TD> UNSEASONABLY COLD </TD> <TD align="right"> 67.50 </TD> </TR>
+  <TR> <TD> COLD AND WET CONDITIONS </TD> <TD align="right"> 66.00 </TD> </TR>
+  <TR> <TD> WINTER STORM HIGH WINDS </TD> <TD align="right"> 65.00 </TD> </TR>
+  <TR> <TD> COLD AIR TORNADO </TD> <TD align="right"> 50.05 </TD> </TR>
+  <TR> <TD> HAIL 150 </TD> <TD align="right"> 50.00 </TD> </TR>
+  <TR> <TD> HURRICANE EMILY </TD> <TD align="right"> 50.00 </TD> </TR>
+  <TR> <TD> SNOW AND ICE </TD> <TD align="right"> 50.00 </TD> </TR>
+  <TR> <TD> URBAN SMALL </TD> <TD align="right"> 50.00 </TD> </TR>
+  <TR> <TD> EARLY FROST </TD> <TD align="right"> 42.00 </TD> </TR>
+  <TR> <TD> AGRICULTURAL FREEZE </TD> <TD align="right"> 28.82 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/HIGH WINDS &amp; FLOOD </TD> <TD align="right"> 21.50 </TD> </TR>
+  <TR> <TD> COASTAL FLOODING/EROSION </TD> <TD align="right"> 20.03 </TD> </TR>
+  <TR> <TD> HURRICANE OPAL/HIGH WINDS </TD> <TD align="right"> 20.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS HEAVY RAINS </TD> <TD align="right"> 17.50 </TD> </TR>
+  <TR> <TD> EROSION/CSTL FLOOD </TD> <TD align="right"> 16.20 </TD> </TR>
+  <TR> <TD> COASTAL  FLOODING/EROSION </TD> <TD align="right"> 15.00 </TD> </TR>
+  <TR> <TD> HEAVY RAIN/HIGH SURF </TD> <TD align="right"> 15.00 </TD> </TR>
+  <TR> <TD> HARD FREEZE </TD> <TD align="right"> 13.10 </TD> </TR>
+  <TR> <TD> FLOOD &amp; HEAVY RAIN </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> HAIL 075 </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> HAIL 125 </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> HAIL 200 </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND G60 </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WINDS G60 </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> UNSEASONABLY WARM </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> UNSEASONAL RAIN </TD> <TD align="right"> 10.00 </TD> </TR>
+  <TR> <TD> DROUGHT/EXCESSIVE HEAT </TD> <TD align="right"> 5.78 </TD> </TR>
+  <TR> <TD> UNSEASONABLE COLD </TD> <TD align="right"> 5.10 </TD> </TR>
+  <TR> <TD> COOL AND WET </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> HEAVY RAIN/LIGHTNING </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/BLIZZARD/AVALANCHE </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW/FREEZING RAIN </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOWPACK </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> HIGH WINDS/COASTAL FLOOD </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> ICE AND SNOW </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> LIGHTNING FIRE </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> SMALL STREAM FLOOD </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> TROPICAL STORM ALBERTO </TD> <TD align="right"> 5.00 </TD> </TR>
+  <TR> <TD> ICE/STRONG WINDS </TD> <TD align="right"> 3.50 </TD> </TR>
+  <TR> <TD> HVY RAIN </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM WIND. </TD> <TD align="right"> 3.00 </TD> </TR>
+  <TR> <TD> HEAVY SNOW AND STRONG WINDS </TD> <TD align="right"> 1.70 </TD> </TR>
+  <TR> <TD> SNOW/FREEZING RAIN </TD> <TD align="right"> 1.20 </TD> </TR>
+  <TR> <TD> HIGH WIND DAMAGE </TD> <TD align="right"> 1.10 </TD> </TR>
+  <TR> <TD> FLOOD/FLASH </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> TORNADOES </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> WIND AND WAVE </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD> HAIL 450 </TD> <TD align="right"> 0.20 </TD> </TR>
+  <TR> <TD> TSTM WIND G58 </TD> <TD align="right"> 0.10 </TD> </TR>
+   </TABLE>
+
+<h3>Processing Event Class Affects</h3>
+
+<p>Events Classes are grouped as follows. Note that event classes can overlap.</p>
+
+<pre><code class="r">MakeGroups &lt;- function (sd) {
+
+    tornado         &lt;- grep(&quot;TORNADO&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    heat            &lt;- grep(&quot;HEAT|HYPERTHERMIA&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    snow.cold       &lt;- grep(&quot;SNOW|COLD|HYPOTHERMIA|WINTER|HAIL|BLIZZARD|ICE|ICY|FREEZ|FROST|GLAZE|WINTRY&quot;, 
+                            sd$EVTYPE2, ignore.case=TRUE)
+    drought         &lt;- grep(&quot;DROUGHT&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    flood           &lt;- grep(&quot;FLOOD|TSUNAMI|WATER|FLD&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    lightning       &lt;- grep(&quot;LIGHTNING&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    fire            &lt;- grep(&quot;FIRE&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    rain            &lt;- grep(&quot;RAIN|LANDSLIDE|MUDSLIDE|AVALANCH?E&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    fog             &lt;- grep(&quot;FOG&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    coastal         &lt;- grep(&quot;CURRENT|SURF|SEAS|WAVE|MARINE&quot;, sd$EVTYPE2, ignore.case=TRUE)
+
+    #different storm categorized
+    thunderstorm    &lt;- grep(&quot;THUNDERSTORM|TSTM&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    wind            &lt;- setdiff(grep(&quot;WIND&quot;, sd$EVTYPE2, ignore.case=TRUE), thunderstorm)
+    hurricane       &lt;- setdiff(grep(&quot;HURRICANE|TYPHOON&quot;, sd$EVTYPE2, 
+                                    ignore.case=TRUE), thunderstorm)    
+    blizzard        &lt;- grep(&quot;BLIZZARD&quot;, sd$EVTYPE2, ignore.case=TRUE)
+    storm           &lt;- setdiff(grep(&quot;STORM&quot;, sd$EVTYPE2, ignore.case=TRUE),
+                               union(thunderstorm, c(blizzard, hurricane)))
+    accounted &lt;- unique(c(tornado, heat, snow.cold, drought, flood, lightning, fire, rain, fog, coastal,
+                          thunderstorm, wind, hurricane, blizzard, storm))
+    others &lt;- setdiff(1:nrow(sd), accounted)
+
+    groups &lt;- data.frame()
+    groups &lt;- rbind(groups, data.frame(group=&quot;TORNADO&quot;, EVTYPE2=unique(sd[tornado, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;HEAT&quot;, EVTYPE2=unique(sd[heat, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;SNOW/COLD&quot;, EVTYPE2=unique(sd[snow.cold, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;DROUGHT&quot;, EVTYPE2=unique(sd[drought, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;FLOOD&quot;, EVTYPE2=unique(sd[flood, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;LIGHTNING&quot;, EVTYPE2=unique(sd[lightning, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;FIRE&quot;, EVTYPE2=unique(sd[fire, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;RAIN&quot;, EVTYPE2=unique(sd[rain, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;FOG&quot;, EVTYPE2=unique(sd[fog, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;COASTAL&quot;, EVTYPE2=unique(sd[coastal, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;THUNDERSTORM&quot;, 
+                                       EVTYPE2=unique(sd[thunderstorm, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;WIND&quot;, EVTYPE2=unique(sd[wind, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;HURRICANE&quot;, EVTYPE2=unique(sd[hurricane, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;BLIZZARD&quot;, EVTYPE2=unique(sd[blizzard, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;OTHER STORMS&quot;, EVTYPE2=unique(sd[storm, c(&quot;EVTYPE2&quot;)])))
+    groups &lt;- rbind(groups, data.frame(group=&quot;OTHER&quot;, EVTYPE2=unique(sd[others, c(&quot;EVTYPE2&quot;)])))
+    groups
+}   
+</code></pre>
+
+<p>Calculate health affects by storm event classes</p>
+
+<pre><code class="r">library(data.table)
+
+sd.health.grp &lt;- MakeGroups(sd.health)
+sd.health.mrg &lt;- merge(sd.health.sum, sd.health.grp, 
+                       by.x=&quot;EVTYPE2&quot;, by.y=&quot;EVTYPE2&quot;, 
+                       all.x=TRUE, all.y=FALSE)
+
+sd.health.mrg.sum &lt;- tapply(sd.health.mrg$HEALTHDAMAGES, sd.health.mrg$group, sum)
+sd.health.mrg.sum &lt;- data.frame(GROUP=names(sd.health.mrg.sum), 
+                            HEALTHDAMAGES=sd.health.mrg.sum, row.names=NULL)
+xt &lt;- xtable(sd.health.mrg.sum)
+print(xt, type=&quot;html&quot;, include.rownames=FALSE)
+</code></pre>
+
+<!-- html table generated in R 3.0.3 by xtable 1.7-3 package -->
+
+<!-- Fri Jul 04 09:38:15 2014 -->
+
+<TABLE border=1>
+<TR> <TH> GROUP </TH> <TH> HEALTHDAMAGES </TH>  </TR>
+  <TR> <TD> TORNADO </TD> <TD align="right"> 97068.00 </TD> </TR>
+  <TR> <TD> HEAT </TD> <TD align="right"> 12363.00 </TD> </TR>
+  <TR> <TD> SNOW/COLD </TD> <TD align="right"> 9327.00 </TD> </TR>
+  <TR> <TD> DROUGHT </TD> <TD align="right"> 25.00 </TD> </TR>
+  <TR> <TD> FLOOD </TD> <TD align="right"> 10480.00 </TD> </TR>
+  <TR> <TD> LIGHTNING </TD> <TD align="right"> 6049.00 </TD> </TR>
+  <TR> <TD> FIRE </TD> <TD align="right"> 1698.00 </TD> </TR>
+  <TR> <TD> RAIN </TD> <TD align="right"> 914.00 </TD> </TR>
+  <TR> <TD> FOG </TD> <TD align="right"> 1158.00 </TD> </TR>
+  <TR> <TD> COASTAL </TD> <TD align="right"> 2315.00 </TD> </TR>
+  <TR> <TD> THUNDERSTORM </TD> <TD align="right"> 10298.00 </TD> </TR>
+  <TR> <TD> WIND </TD> <TD align="right"> 2692.00 </TD> </TR>
+  <TR> <TD> HURRICANE </TD> <TD align="right"> 1468.00 </TD> </TR>
+  <TR> <TD> BLIZZARD </TD> <TD align="right"> 907.00 </TD> </TR>
+  <TR> <TD> OTHER STORMS </TD> <TD align="right"> 4636.00 </TD> </TR>
+  <TR> <TD> OTHER </TD> <TD align="right"> 125.00 </TD> </TR>
+   </TABLE>
+
+<p>Calculate economic affects by storm event classes</p>
+
+<pre><code class="r">sd.econ.grp &lt;- MakeGroups(sd.econ)
+sd.econ.mrg &lt;- merge(sd.econ.sum, sd.econ.grp, 
+                       by.x=&quot;EVTYPE2&quot;, by.y=&quot;EVTYPE2&quot;, 
+                       all.x=TRUE, all.y=FALSE)
+
+sd.econ.mrg.sum &lt;- tapply(sd.econ.mrg$DMGCASH, sd.econ.mrg$group, sum)
+sd.econ.mrg.sum &lt;- data.frame(GROUP=names(sd.econ.mrg.sum),
+                              DMGCASH=sd.econ.mrg.sum, row.names=NULL)
+xt &lt;- xtable(sd.econ.mrg.sum)
+print(xt, type=&quot;html&quot;, include.rownames=FALSE)
+</code></pre>
+
+<!-- html table generated in R 3.0.3 by xtable 1.7-3 package -->
+
+<!-- Fri Jul 04 09:38:17 2014 -->
+
+<TABLE border=1>
+<TR> <TH> GROUP </TH> <TH> DMGCASH </TH>  </TR>
+  <TR> <TD> TORNADO </TD> <TD align="right"> 223269269948.95 </TD> </TR>
+  <TR> <TD> HEAT </TD> <TD align="right"> 3217240.29 </TD> </TR>
+  <TR> <TD> SNOW/COLD </TD> <TD align="right"> 21184615648.66 </TD> </TR>
+  <TR> <TD> DROUGHT </TD> <TD align="right"> 3290997.45 </TD> </TR>
+  <TR> <TD> FLOOD </TD> <TD align="right"> 24462176175.60 </TD> </TR>
+  <TR> <TD> LIGHTNING </TD> <TD align="right"> 620414847.91 </TD> </TR>
+  <TR> <TD> FIRE </TD> <TD align="right"> 119394161.99 </TD> </TR>
+  <TR> <TD> RAIN </TD> <TD align="right"> 2079483225.66 </TD> </TR>
+  <TR> <TD> FOG </TD> <TD align="right"> 17251507.76 </TD> </TR>
+  <TR> <TD> COASTAL </TD> <TD align="right"> 12400862.22 </TD> </TR>
+  <TR> <TD> THUNDERSTORM </TD> <TD align="right"> 82921383201.91 </TD> </TR>
+  <TR> <TD> WIND </TD> <TD align="right"> 35469711760.91 </TD> </TR>
+  <TR> <TD> HURRICANE </TD> <TD align="right"> 14200030.03 </TD> </TR>
+  <TR> <TD> BLIZZARD </TD> <TD align="right"> 25384761.53 </TD> </TR>
+  <TR> <TD> OTHER STORMS </TD> <TD align="right"> 273339570.22 </TD> </TR>
+  <TR> <TD> OTHER </TD> <TD align="right"> 11344894.05 </TD> </TR>
+   </TABLE>
+
+<h2>Results</h2>
+
+<h3>Health Affects</h3>
+
+<p>Show top health affects</p>
+
+<pre><code class="r">sd.health.sum.top &lt;- head(sd.health.sum, n=25)
+sd.health.sum.top$HEALTHDAMAGES &lt;- sd.health.sum.top$HEALTHDAMAGES / 1000
+
+sdh.gp &lt;- ggplot(sd.health.sum.top, aes(x=EVTYPE2, y=HEALTHDAMAGES)) +
+    xlab(&quot;Events&quot;) + 
+    ylab(&quot;Health affects in Thousands&quot;) + 
+    ggtitle(paste(&quot;Top&quot;, nrow(sd.health.sum.top), 
+                  &quot;strom related health affects in USA from 1950 - 2011&quot;)) +
+    geom_bar(stat=&quot;identity&quot;, fill=rainbow(n=length(sd.health.sum.top$EVTYPE2))) +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
+
+sdh.gp
+</code></pre>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-9"/> </p>
+
+<h3>Economic Affects</h3>
+
+<p>Show top economic affects</p>
+
+<pre><code class="r">sd.econ.sum.top &lt;- head(sd.econ.sum, n=25)
+sd.econ.sum.top$DMGCASH &lt;- sd.econ.sum.top$DMGCASH / (10^9)
+
+sde.gp &lt;- ggplot(sd.econ.sum.top, aes(x=EVTYPE2, y=DMGCASH)) +
+    xlab(&quot;Events&quot;) + 
+    ylab(&quot;Economic affects in Billions&quot;) + 
+    ggtitle(paste(&quot;Top&quot;, nrow(sd.econ.sum.top), 
+                  &quot;strom related economic affects in USA from 1950 - 2011&quot;)) +
+    geom_bar(stat=&quot;identity&quot;, fill=rainbow(n=length(sd.econ.sum.top$EVTYPE2))) +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
+
+sde.gp
+</code></pre>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-10"/> </p>
+
+<h3>Event Class Affects</h3>
+
+<p>We use multiplot function, which is obtained from <a href="http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/">http://www.cookbook-r.com/Graphs/Multiple_graphs_on_one_page_(ggplot2)/</a></p>
+
+<p>Show health and economic affects by storm event classes </p>
+
+<pre><code class="r">sd.health.mrg.sum$HEALTHDAMAGES &lt;- sd.health.mrg.sum$HEALTHDAMAGES / 1000
+sd.econ.mrg.sum$DMGCASH &lt;- sd.econ.mrg.sum$DMGCASH / (10^9)
+
+sdh.grp.gp &lt;- ggplot(sd.health.mrg.sum, aes(x=GROUP, y=HEALTHDAMAGES)) +
+    xlab(&quot;Event Classes&quot;) + 
+    ylab(&quot;Health affects in Thousands&quot;) + 
+    ggtitle(&quot;Health affects&quot;) +
+    geom_bar(stat=&quot;identity&quot;, fill=rainbow(n=length(sd.health.mrg.sum$GROUP))) +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
+
+sde.grp.gp &lt;- ggplot(sd.econ.mrg.sum, aes(x=GROUP, y=DMGCASH)) +
+    xlab(&quot;Event Classes&quot;) + 
+    ylab(&quot;Economic affects in Billions&quot;) + 
+    ggtitle(&quot;Economic affects&quot;) +
+    geom_bar(stat=&quot;identity&quot;, fill=rainbow(n=length(sd.econ.mrg.sum$GROUP))) +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust=0.5))
+
+multiplot(sdh.grp.gp, sde.grp.gp, cols=2)
+</code></pre>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-12"/> </p>
+
+<h2>Conclusion</h2>
+
+<p>We have presented the types of storm related events that are responsible for most negative affects in USA from 1950 t0 2011 </p>
+
+</body>
+
+</html>
